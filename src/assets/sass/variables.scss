@@ -1,0 +1,31 @@
+/* default styles */
+$font-color-default: #212121;
+$font-family-default: 'Open Sans', sans-serif;
+$font-size-default: 15px;
+$font-weight-default: 400;
+$line-height-default: 2.5;
+
+$color-white: #fff;
+$color-turquoise: #e4fdf9;
+$color-turquoise-dark: #00897b;
+$color-gray: #f0f1f1;
+$color-blue: #3949ab;
+
+/* font awesome */
+$fa-font-path: "../fonts/webfonts/";
+
+/* bootstrap */
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px
+);
