@@ -16,8 +16,10 @@ const panini = require('panini');
 const browsersync = require('browser-sync').create();
 const ttf2woff = require('gulp-ttf2woff');
 const ttf2woff2 = require('gulp-ttf2woff2');
+const gulpGhPages = require('gulp-gh-pages')
 
 let fs = require('fs');
+const ghPages = require('gulp-gh-pages');
 
 let path = {
     build: {
@@ -175,6 +177,11 @@ function fontAwesomeWebFonts() {
         }
 }
 
+function initialGhDeploy() {
+    return gulp.src('./dist/**/*')
+        .pipe(gulpGhPages)
+}
+
 function watchFiles() {
     gulp.watch([path.watch.html], html);
     gulp.watch([path.watch.css], css);
@@ -185,8 +192,10 @@ function watchFiles() {
 
 const build = gulp.series(clean, gulp.parallel(html, js, images, fonts, fontAwesomeWebFonts), css, fontsStyle, browserSync);
 const watch = gulp.parallel(build, watchFiles)
+const deploy = gulp.parallel(initialGhDeploy)
 
 /* Export Tasks */
+exports.deploy = deploy;
 exports.fontsStyle = fontsStyle;
 exports.fonts = fonts;
 exports.html = html;
