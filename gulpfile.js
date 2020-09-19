@@ -30,14 +30,14 @@ let path = {
         html: 'src/*.html',
         js: 'src/assets/js/*.js',
         css: 'src/assets/sass/style.scss',
-        images: 'src/assets/img/**/*.(jpg|jpeg|png|svg|gif|ico)',
+        images: 'src/assets/img/**/*.{jpg,jpeg,png,svg,gif,ico}',
         fonts: 'src/assets/fonts/*.ttf',
     },
     watch: {
         html: 'src/**/*.html',
         js: 'src/assets/js/**/*.js',
         css: 'src/assets/sass/**/*.scss',
-        images: 'src/assets/img/**/*.(jpg|jpeg|png|svg|gif|ico)',
+        images: 'src/assets/img/**/*.{jpg,jpeg,png,svg,gif,ico}',
         fonts: 'src/assets/fonts/',
     },
     clean: './dist/',
@@ -106,7 +106,6 @@ function css() {
         }))
         .pipe(dest(path.build.css))
         .pipe(browsersync.stream());
-
 }
 
 function js() {
@@ -124,7 +123,7 @@ function js() {
 }
 
 function images() {
-    return src(path.src.images, { base: 'src/assets/img'})
+    return src(path.src.images)
         .pipe(imagemin())
         .pipe(dest(path.build.images));
 }
@@ -182,7 +181,7 @@ function watchFiles() {
     gulp.watch([path.watch.fonts], fonts);
 }
 
-const build = gulp.series(clean, gulp.parallel(html, js, images, fonts, fontAwesomeWebFonts), css, fontsStyle, browserSync);
+const build = gulp.series(clean, gulp.parallel(html, js, images, fonts, fontAwesomeWebFonts), css, fontsStyle,  browserSync);
 const watch = gulp.parallel(build, watchFiles);
 
 /* Export Tasks */
