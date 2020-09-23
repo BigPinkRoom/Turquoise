@@ -1,0 +1,67 @@
+/* common */
+
+// button
+.button {
+    display: inline-block;
+    padding: 15px 15px;
+
+    color: $color-white;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    
+    border: 2px solid $color-white;
+
+    transition: background-color .2s linear, border-color .2s linear, color .2s linear;
+
+    &:hover {
+        color: $white;
+
+        background-color: $color-turquoise-dark;
+        border-color: $color-turquoise-dark;
+    }
+}
+
+.button--black {
+    color: $color-black;
+    border-color: $color-black;
+}
+
+// section 
+.section {
+    padding: 120px 0;
+
+    @media(max-width: 991.98px) {
+     padding: 90px 0;   
+    }
+}
+
+.section--turquoise {
+    background-color: $color-turquoise;
+}
+
+.section--gray {
+    background-color: $color-gray;
+}
+
+.section__inner {
+    margin-bottom: 115px;
+
+    @media(max-width: 991.98px) {
+        margin-bottom: 85px;   
+       }
+}
+
+.section__header {
+    max-width: 630px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.section__title {
+    margin-bottom: 22px;
+
+    font-size: 30px;
+    font-weight: 700;
+}

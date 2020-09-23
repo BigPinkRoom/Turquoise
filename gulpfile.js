@@ -1,6 +1,7 @@
 'use strict'
 const {src, dest} = require ('gulp');
 const gulp = require ('gulp');
+const uglify = require ('gulp-uglify');
 const autoprefixer = require('gulp-autoprefixer');
 const cssbeautify = require('gulp-cssbeautify');
 const cssnano = require('gulp-cssnano');
@@ -10,7 +11,6 @@ const rename = require('gulp-rename');
 const rigger = require('gulp-rigger');
 const sass = require('gulp-sass');
 const stripComments = require('gulp-strip-css-comments');
-const uglify = require('gulp-uglify');
 const del = require('del');
 const panini = require('panini');
 const browsersync = require('browser-sync').create();

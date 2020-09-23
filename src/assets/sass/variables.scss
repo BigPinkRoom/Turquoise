@@ -3,13 +3,18 @@ $font-color-default: #212121;
 $font-family-default: 'Open Sans', sans-serif;
 $font-size-default: 15px;
 $font-weight-default: 400;
-$line-height-default: 2.5;
+$line-height-default: 1.5;
 
 $color-white: #fff;
 $color-turquoise: #e4fdf9;
 $color-turquoise-dark: #00897b;
 $color-gray: #f0f1f1;
 $color-blue: #3949ab;
+$color-black: #000000;
+
+$shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.35);
+
+$border-radius: 10px;
 
 /* font awesome */
 $fa-font-path: '../fonts/webfonts/';

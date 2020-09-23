@@ -1,3 +1,4 @@
+/* fonts */
 @mixin font($font_name, $file_name, $weight, $style) {
         @font-face {
         font-family: $font_name;
@@ -12,9 +13,6 @@
 
 /* variables */
 @import 'variables';
-
-/* nulled style */
-@import 'null';
 
 /* font awesome */
 @import '../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
@@ -32,16 +30,20 @@
 @import '../../../node_modules/bootstrap/scss/utilities/flex';
 @import '../../../node_modules/bootstrap/scss/utilities/spacing';
 @import '../../../node_modules/bootstrap/scss/utilities/sizing';
+@import '../../../node_modules/bootstrap/scss/carousel';
 
-/* default styles */
+/* nulled style */
+@import 'null';
 
 /* blocks */
+@import 'blocks/common';
 @import 'blocks/header';
 @import 'blocks/intro';
-// @import 'blocks/about';
-// @import 'blocks/services';
-// @import 'blocks/works';
-// @import 'blocks/pricing';
-// @import 'blocks/team';
-// @import 'blocks/blog';
-// @import 'blocks/footer';
+@import 'blocks/about';
+@import 'blocks/services';
+@import 'blocks/works';
+@import 'blocks/pricing';
+@import 'blocks/team';
+@import 'blocks/blog';
+@import 'blocks/contact';
+@import 'blocks/footer';
