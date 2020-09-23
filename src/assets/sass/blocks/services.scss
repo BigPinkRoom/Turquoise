@@ -16,6 +16,10 @@
     margin-bottom: 35px;
     
     transition: color .2s linear;
+
+    @media (max-width: $max-sm) {
+        font-size: 15px;
+    }
 }
 
 .services__item {
@@ -49,7 +53,11 @@
         
             background-color: $color-turquoise;
         }
-    }    
+    }
+
+    @media (max-width: $max-sm) {
+        padding: 20px 10px;
+    }
 }
 
 .services__image {

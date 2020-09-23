@@ -5,9 +5,13 @@
 }
 
 .team__image {
-    margin-bottom: 30px;
+    margin:0 auto 30px;
 
     border-radius: 10px;
+
+    @media (max-width: $max-sm) {
+        margin-bottom: 5px;
+    }
 }
 
 .team__title {
@@ -15,10 +19,20 @@
 
     font-size: 20px;
     font-weight: 600;
+
+    @media (max-width: $max-sm) {
+        font-size: 15px;
+        margin-bottom: 2px;
+    }
 }
 
 .team__subtitle {
     margin-bottom: 20px;
+
+    @media (max-width: $max-sm) {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
 }
 
 .team-social {
@@ -41,15 +55,50 @@
             color: $color-white;
         }
     }
+
+    @media (max-width: $max-xl) {
+        min-width: 47px;
+        padding: 6px 0;
+        margin: 0 4px;
+    }
+
+    @media (max-width: $max-md) {
+        min-width: 33px;
+        padding: 3px 0;
+        margin: 0 4px;
+    }
+
+    @media (max-width: $max-sm) {
+        display: none;
+        min-width: 24px;
+        padding: 0;
+        margin: 0 2px;
+    }
 }
 
 .team-social__link {
     color: $color-turquoise-dark;
     font-size: 30px;
+
+    @media (max-width: $max-xl) {
+        font-size: 25px;
+    }
+
+    @media (max-width: $max-md) {
+        font-size: 20px;
+    }
+
+    @media (max-width: $max-md) {
+        font-size: 18px;
+    }
 }
 
 .carousel--team {
     padding-bottom: 140px;
+
+    @media (max-width: $max-sm) {
+        padding-bottom: 75px;
+    }
 }
 
 .carousel--team li{

@@ -13,8 +13,14 @@ $color-blue: #3949ab;
 $color-black: #000000;
 
 $shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.35);
+$shadow-light: 0px 3px 10px rgba(0, 0, 0, 0.3);
 
 $border-radius: 10px;
+
+$max-sm: 575.98px;
+$max-md: 767.98px;
+$max-lg: 991.98px;
+$max-xl: 1199.98px;
 
 /* font awesome */
 $fa-font-path: '../fonts/webfonts/';

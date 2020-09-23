@@ -4,10 +4,10 @@
         <div class="container">
             <div class="header__inner">
                 <div class="row">
-                    <div class="col-sm-2">
+                    <div class="col-auto mr-auto col-lg-2">
                         <a href="#" class="logo">Your Logo</a>
                     </div>
-                    <div class="col-sm-8 mt-auto ml-auto">
+                    <div class="d-none mt-auto ml-auto col-lg-8  d-lg-block ">
                         <nav class="nav">
                             <ul class="nav__ul">
                                 <li class="nav__li"><a href="#" class="nav__link">Home</a></li>
@@ -19,10 +19,16 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="col-sm-auto mt-auto">
+                    <div class="col-4 d-none col-lg-auto d-lg-block mt-auto">
                         <div class="header__search">
-                            <i class="fas fa-search"></i>
+                            <div class="header__icon"><i class="fas fa-search"></i></div>
+                            <input class="header__input" type="text" placeholder="search...">
                         </div>
+                    </div>
+                    <div class="col-auto d-flex ml-auto d-lg-none align-items-center">
+                        <button class="nav-toggle">
+                            <span class="nav-toggle__item">Menu</span>
+                        </button>
                     </div>
                 </div>
             </div>

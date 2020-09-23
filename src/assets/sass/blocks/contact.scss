@@ -28,12 +28,24 @@
     border-radius: 50%;
     background-color: $color-blue;
     }
+
+    @media (max-width: $max-md) {
+        margin-bottom: 15px;
+    }
 }
 
 .contact__text {
     font-size: 20px;
     font-weight: 600;
     text-align: center;
+
+    @media (max-width: $max-xl) {
+        font-size: 18px;
+    }
+
+    @media (max-width: $max-lg) {
+        font-size: 16px;
+    }
 }
 
 .contact__input {

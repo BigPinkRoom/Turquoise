@@ -2,7 +2,6 @@
     display: flex;
     align-items: flex-end;
     height: 655px;
-    padding-bottom: 60px;
 
     color: $color-white;
     text-align: center;
@@ -13,25 +12,34 @@
 }
 
 .intro__title {
-    margin-bottom: 15px;
-
     font-size: 60px;
     font-weight: 600;
+
+    @media (max-width: $max-lg) {
+        font-size: 54px;
+    }
+
+    @media (max-width: $max-md) {
+        font-size: 40px;
+    }
+
+    @media (max-width: $max-sm) {
+        font-size: 28px;
+    }
 }
 
 .intro__subtitle {
-    margin-bottom: 100px;
-
     font-size: 22px;
     font-weight: 400;
+
+    @media (max-width: $max-sm) {
+        font-size: 19px;
+    }
 }
 
 .intro__button {
-    margin-bottom: 100px;
-
     .button {
         min-width: 220px;
-        margin: 0 9px 0;
         padding: 18px 10px;
 
         border: 3px solid;

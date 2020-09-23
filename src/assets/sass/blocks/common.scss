@@ -31,8 +31,12 @@
 .section {
     padding: 120px 0;
 
-    @media(max-width: 991.98px) {
+    @media(max-width: $max-lg) {
      padding: 90px 0;   
+    }
+
+    @media (max-width: $max-sm) {
+        padding: 50px 0;
     }
 }
 
@@ -47,9 +51,13 @@
 .section__inner {
     margin-bottom: 115px;
 
-    @media(max-width: 991.98px) {
+    @media (max-width: $max-lg) {
         margin-bottom: 85px;   
        }
+
+    @media (max-width: $max-sm) {
+        margin-bottom: 40px;
+    }
 }
 
 .section__header {
