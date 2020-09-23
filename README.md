@@ -1,2 +1,0 @@
-# Turquoise
-Turquoise - template
