@@ -2,3 +2,9 @@
 //= ../../../node_modules/@popperjs/core/dist/umd/popper.min.js
 //= ../../../node_modules/bootstrap/js/dist/util.js
 //= ../../../node_modules/bootstrap/js/dist/carousel.js
+//= modules/toggleNav.js
+//= modules/toggleSearch.js
+//= modules/smoothScroll.js
+//= modules/fixedHeader.js
+//= modules/activeLink.js
+//= modules/filterGallery.js

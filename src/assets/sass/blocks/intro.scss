@@ -2,6 +2,7 @@
     display: flex;
     align-items: flex-end;
     height: 655px;
+    margin-top: 125px;
 
     color: $color-white;
     text-align: center;
@@ -9,6 +10,10 @@
     background-color: $color-black;
     background-image: url('../img/intro/intro-bg.jpg');
     background-size: cover;
+
+    @media (max-width: $max-lg) {
+        margin-top: 74px;
+    }
 }
 
 .intro__title {

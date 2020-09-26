@@ -1,32 +1,45 @@
 
 <!-- header -->
-<header class="header">
+<header class="header" id="header">
         <div class="container">
             <div class="header__inner">
-                <div class="row">
+                <div class="row header__row">
                     <div class="col-auto mr-auto col-lg-2">
                         <a href="#" class="logo">Your Logo</a>
                     </div>
-                    <div class="d-none mt-auto ml-auto col-lg-8  d-lg-block ">
+                    <div class="mt-auto ml-auto col-lg-8  d-lg-block header__nav">
                         <nav class="nav">
                             <ul class="nav__ul">
-                                <li class="nav__li"><a href="#" class="nav__link">Home</a></li>
-                                <li class="nav__li"><a href="#" class="nav__link">About</a></li>
-                                <li class="nav__li"><a href="#" class="nav__link">Servicing</a></li>
-                                <li class="nav__li"><a href="#" class="nav__link">Portfolio</a></li>
-                                <li class="nav__li"><a href="#" class="nav__link">Blog</a></li>
-                                <li class="nav__li"><a href="#" class="nav__link">Contact us</a></li>
+                                <li class="nav__li">
+                                    <a href="#" class="nav__link" data-scroll="intro">Home</a>
+                                </li>
+                                <li class="nav__li">
+                                    <a href="#" class="nav__link" data-scroll="about">About</a>
+                                </li>
+                                <li class="nav__li">
+                                    <a href="#" class="nav__link" data-scroll="services">Servicing</a>
+                                </li>
+                                <li class="nav__li">
+                                    <a href="#" class="nav__link" data-scroll="works">Portfolio</a>
+                                </li>
+                                <li class="nav__li">
+                                    <a href="#" class="nav__link" data-scroll="blog">Blog</a>
+                                </li>
+                                <li class="nav__li">
+                                    <a href="#" class="nav__link" data-scroll="contact">Contact us</a>
+                                </li>
                             </ul>
                         </nav>
                     </div>
                     <div class="col-4 d-none col-lg-auto d-lg-block mt-auto">
-                        <div class="header__search">
-                            <div class="header__icon"><i class="fas fa-search"></i></div>
-                            <input class="header__input" type="text" placeholder="search...">
-                        </div>
+                        <form action="/" method="POST" class="header-search" id="headerSearch">
+                            <div class="header-search__icon" id="headerSearchIcon"><i class="fas fa-search"></i></div>
+                            <input class="header-search__input" id="headerSearchInput" type="text" placeholder="Search...">
+                            <button class="header-search__button">Ok</button>
+                        </form>
                     </div>
-                    <div class="col-auto d-flex ml-auto d-lg-none align-items-center">
-                        <button class="nav-toggle">
+                    <div class="col-auto d-flex ml-auto d-lg-none align-items-center header__toggle">
+                        <button class="nav-toggle" id="navToggle">
                             <span class="nav-toggle__item">Menu</span>
                         </button>
                     </div>

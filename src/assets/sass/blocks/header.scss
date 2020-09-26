@@ -1,12 +1,57 @@
-/* header*/
 
+/* header*/
 .header {
+    position: absolute;
+    top: 0;
+
+    width: 100%;
+    z-index: 1000;
+
+    background-color: $color-white;
+
+    @media (max-width: $max-lg) {
+
+        &.active {
+            .header__inner {
+                padding-bottom: 10px;
+            }
+    
+            .header__nav {
+                display: block;
+            }
+    
+            .nav {
+                width: 100%;
+                padding-top: 15px;
+            }
+    
+            .nav__ul {
+                flex-direction: column;
+            }
+    
+            .nav__li {
+                margin-left: 0;
+                margin-right: 0;
+            }
+    
+            .nav__li:last-child {
+                margin-right: 0;
+            }
+    
+            .nav__link {
+                display: block;
+                padding-top: 4px;
+                padding-bottom: 4px;
+    
+                text-align: left;
+            }
+        }
+    }
 
     &.fixed {
         position: fixed;
 
         width: 100%;
-
 
         background-color: $color-white;
         box-shadow: $shadow-light;
@@ -14,13 +59,30 @@
         z-index: 1000;
 
         .header__inner {
-            padding: 20px;
+            padding: 20px 0;
         }
     }
 }
 
 .header__inner {
+    position: relative;
+
     padding: 45px 0;
+
+    @media (max-width: $max-lg) {
+    padding: 20px 0;
+    }
+}
+
+.header__row {
+    position: relative;
+}
+
+.header__nav {
+    
+    @media (max-width:$max-lg) {
+        display: none;
+    }  
 }
 
 .logo {
@@ -50,13 +112,29 @@
 .nav__link {
     font-size: 20px;
     font-weight: 600;
+
+    transition: color .2s linear;
+
+    @media (hover: hover) {
+        &:hover {
+            color: $color-turquoise-dark;
+        }
+    }
+
+    &.active {
+        color: $color-turquoise-dark;
+    }
 }
 
-.header__input {
+.header-search__input {
     width: 0;
-
+    height: 35px;
     padding: 2px 5px;
 
+    font-size: 14px;
+
+    border: 1px solid $color-turquoise-dark;
+    border-radius: $border-radius 0 0 $border-radius;
     visibility: hidden;
     opacity: 0;
     
@@ -67,13 +145,34 @@
     }
 }
 
-.header__icon {
+.header-search__icon {
     margin-top: 7px;
 
-    transition: position .2s linear, font-size .2s linear, margin-top .2s linear;
+    transition: position .2s linear, color .2s linear, font-size .2s linear, margin-top .2s linear;
+
+    cursor: pointer;
+
+    &:hover {
+        color: $color-turquoise-dark;
+    }
 }
 
-.header__search {
+.header-search__button {
+    width: 0;
+
+    color: $color-turquoise-dark;
+    font-size: 0;
+
+    border: 1px solid $color-turquoise-dark;
+    border-radius: 0 $border-radius $border-radius 0;
+    visibility: hidden;
+    opacity: 0;
+    background-color: $color-turquoise-dark;
+
+    transition: width .2s linear, opacity .2s linear, visibility .2s linear, font-size .2s linear, color .2s linear;
+}
+
+.header-search {
     position: relative;
 
     display: flex;
@@ -81,14 +180,14 @@
     font-size: 20px;
 
     &.active {
-        .header__input {
-            width: 100px;
+        .header-search__input {
+            width: 77px;
 
             visibility: visible;
             opacity: 1;
         }
 
-        .header__icon {
+        .header-search__icon {
             position: relative;
             top: -1px;
             left: -4px;
@@ -97,7 +196,24 @@
 
             font-size: 14px;
         }
+
+        .header-search__button {
+            width: 34px;
+
+            color: $color-white;
+            font-size: 14px;
+
+            visibility: visible;
+            opacity: 1;
+        }
     }
+}
+
+.header__toggle {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    height: 29px;
 }
 
 .nav-toggle {
@@ -135,7 +251,8 @@
     }
 
     @media (max-width: $max-lg) {
-        &.active {
+        .header.active & {
+
             height: 30px;
 
             .nav-toggle__item {
@@ -167,5 +284,5 @@
 
     background: $color-black;
 
-    transition: background-color .2s linear;
+    transition: background .2s linear;
 }

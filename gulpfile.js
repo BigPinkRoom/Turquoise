@@ -1,7 +1,7 @@
 'use strict'
 const {src, dest} = require ('gulp');
 const gulp = require ('gulp');
-const uglify = require ('gulp-uglify');
+const uglify = require ('gulp-uglify-es').default;
 const autoprefixer = require('gulp-autoprefixer');
 const cssbeautify = require('gulp-cssbeautify');
 const cssnano = require('gulp-cssnano');
