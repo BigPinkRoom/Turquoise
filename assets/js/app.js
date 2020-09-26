@@ -809,3 +809,147 @@
 
 })));
 //# sourceMappingURL=carousel.js.map
+
+/* toggleNav */
+$(document).ready(function() {
+    const $toggleButton = $('#navToggle');
+    const $navBar = $('#header');
+
+    $toggleButton.on('click', function(event) {
+        event.preventDefault();
+        $navBar.toggleClass('active');
+    })
+
+    $(document).on('click', function(event) {
+        if ( !$(event.target).closest('#header').length ) {
+            $navBar.removeClass('active');
+        }
+    })
+})
+
+/* toggleSearch */
+$(document).ready(function() {
+    const $headerSearchForm = $('#headerSearch');
+    const $headerSearchIcon = $('#headerSearchIcon');
+
+    $headerSearchIcon.on('click', function() {
+        $headerSearchForm.toggleClass('active');
+    })
+
+    $(document).keyup(function(event) {
+
+        if ( $headerSearchForm.hasClass('active') && event.keyCode === 13 ) {   // key "Enter"
+            $headerSearchForm.submit();
+        } else if ( $headerSearchForm.hasClass('active') && event.keyCode === 27 ) {  // key "Escape"
+            $headerSearchForm.removeClass('active');
+        }
+    })
+
+    $(document).on('click', function(event) {
+        if ( !$(event.target).closest('#headerSearch' ).length) {
+            $headerSearchForm.removeClass('active');
+        }
+    })
+})
+
+/* smoothScroll */
+$(document).ready(function() {
+    const $attribute = 'data-scroll';
+
+    $(document).on('click', function(event) {
+
+        let $attributeData = $(event.target).attr($attribute);
+
+        if ( $attributeData ) {
+            event.preventDefault();
+            
+            let $id = '#' + $attributeData;
+
+            $('body, html').animate({
+                scrollTop: $($id).offset().top,
+            }, 1000)
+        }
+    })
+})
+
+/* fixedHeader */
+$(document).ready(function() {
+
+    const $header = $('#header');
+    const $intro = $('#intro');
+
+    checkScroll();
+
+    $(window).on('scroll', function() {
+        checkScroll();
+    })
+
+    function checkScroll() {
+        if ( $(window).scrollTop() >= $intro.outerHeight() + $intro.offset().top ) {
+            $header.addClass('fixed');
+        } else {
+            $header.removeClass('fixed');
+        }
+    }
+})
+
+/* activeLink */
+$(document).ready(function() {
+    checkLink();
+
+    $(window).on('scroll', function() {
+        checkLink();
+    })
+
+    function onElement(idElement, attrubuteLink, position) {
+        let $idElement = $(`#${idElement}`);
+        let $elementStartPosition = $idElement.offset().top;
+        let $elementEndPosition = $idElement.offset().top + $idElement.outerHeight();
+        let $elementLink = $(`a[${attrubuteLink}="${idElement}"]`);
+        
+        if( position >= $elementStartPosition && $(window).scrollTop() < $elementEndPosition ) {
+            return [$elementLink, true]
+        } else {
+            return [$elementLink, false]
+        }
+    }
+
+    function checkLink() {
+        let $position = $(window).scrollTop();
+
+        let elements = {
+            $home: onElement('intro', 'data-scroll', $position),
+            $about: onElement('about', 'data-scroll', $position),
+            $services: onElement('services', 'data-scroll', $position),
+            $works: onElement('works', 'data-scroll', $position),
+            $blog: onElement('blog', 'data-scroll', $position),
+            $contact: onElement('contact', 'data-scroll', $position),    
+        };
+
+        for (let key in elements) {
+            if(elements[key][1]) {
+                $(elements[key][0]).addClass('active');
+            } else {
+                $(elements[key][0]).removeClass('active');
+            }
+        }
+    }
+})
+
+/* filterGallery */
+$(document).ready(function() {
+    let button = '#works .works__button';
+    let image = '#works img[data-category]';    
+
+    $('#works .works__button').on('click', function(event) {
+        let $category = $(this).text().toLocaleLowerCase();
+
+        if($category === "all" || $category === "view all") {
+            $(image).parent().parent().show();
+            return
+        }
+
+        $(image).parent().parent().show();
+        $(image).not(`#works img[data-category="${$category}"]`).parent().parent().hide();
+    })
+})

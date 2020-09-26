@@ -10,56 +10,104 @@
     
     
     <!-- header -->
-    <header class="header">
+    <header class="header" id="header">
             <div class="container">
                 <div class="header__inner">
-                    <div class="row">
-                        <div class="col-sm-2">
+                    <div class="row header__row">
+                        <div class="col-auto mr-auto col-lg-2">
                             <a href="#" class="logo">Your Logo</a>
                         </div>
-                        <div class="col-sm-8 mt-auto ml-auto">
+                        <div class="mt-auto ml-auto col-lg-8  d-lg-block header__nav">
                             <nav class="nav">
                                 <ul class="nav__ul">
-                                    <li class="nav__li"><a href="#" class="nav__link">Home</a></li>
-                                    <li class="nav__li"><a href="#" class="nav__link">About</a></li>
-                                    <li class="nav__li"><a href="#" class="nav__link">Servicing</a></li>
-                                    <li class="nav__li"><a href="#" class="nav__link">Portfolio</a></li>
-                                    <li class="nav__li"><a href="#" class="nav__link">Blog</a></li>
-                                    <li class="nav__li"><a href="#" class="nav__link">Contact us</a></li>
+                                    <li class="nav__li">
+                                        <a href="#" class="nav__link" data-scroll="intro">Home</a>
+                                    </li>
+                                    <li class="nav__li">
+                                        <a href="#" class="nav__link" data-scroll="about">About</a>
+                                    </li>
+                                    <li class="nav__li">
+                                        <a href="#" class="nav__link" data-scroll="services">Servicing</a>
+                                    </li>
+                                    <li class="nav__li">
+                                        <a href="#" class="nav__link" data-scroll="works">Portfolio</a>
+                                    </li>
+                                    <li class="nav__li">
+                                        <a href="#" class="nav__link" data-scroll="blog">Blog</a>
+                                    </li>
+                                    <li class="nav__li">
+                                        <a href="#" class="nav__link" data-scroll="contact">Contact us</a>
+                                    </li>
                                 </ul>
                             </nav>
                         </div>
-                        <div class="col-sm-auto mt-auto">
-                            <div class="header__search">
-                                <i class="fas fa-search"></i>
-                            </div>
+                        <div class="col-4 d-none col-lg-auto d-lg-block mt-auto">
+                            <form action="/" method="POST" class="header-search" id="headerSearch">
+                                <div class="header-search__icon" id="headerSearchIcon"><i class="fas fa-search"></i></div>
+                                <input class="header-search__input" id="headerSearchInput" type="text" placeholder="Search...">
+                                <button class="header-search__button">Ok</button>
+                            </form>
+                        </div>
+                        <div class="col-auto d-flex ml-auto d-lg-none align-items-center header__toggle">
+                            <button class="nav-toggle" id="navToggle">
+                                <span class="nav-toggle__item">Menu</span>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
     </header>
     <!-- intro -->
-    <section class="intro">
-        <div class="container">
+    <section class="intro" id="intro">
+        <div class="container h-100 d-flex flex-column justify-content-center justify-content-md-around intro__container">
+    
             <div class="row">
-                <div class="col-sm-12">
-                    <div class="intro__header">
-                        <h1 class="intro__title">Web development project</h1>
-                        <h2 class="intro__subtitle">Very suitable to support all web development projects</h2>
+                <div class="col-12">
+                </div>
+            </div>
+    
+            <div class="intro__header mb-5 mb-md-0">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row mb-3">
+                            <div class="col-12">
+                                <h1 class="intro__title">Web development project</h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h2 class="intro__subtitle">Very suitable to support all web development projects</h2>
+                            </div>
+                        </div>
                     </div>
-                    <div class="intro__button">
-                        <a href="#" class="button">Our services</a>
-                        <a href="#" class="button">Hire is now</a>
+                </div>
+            </div>
+    
+            <div class="intro__button">
+                <div class="row flex-column justify-content-sm-center mt-5 my-sm-0 flex-sm-row">
+                    <div class="col-auto mb-4 mb-sm-0">
+                        <a href="#" class="button" data-scroll="services">Our services</a>
                     </div>
+                    <div class="col-auto">
+                        <a href="#" class="button" data-scroll="contact">Hire is now</a>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="row d-none d-md-block">
+                <div class="col-12">
                     <div class="intro__icon">
-                        <i class="fas fa-angle-down"></i>
+                        <i class="fas fa-angle-down" data-scroll="about"></i>
                     </div>
+                </div>
+            </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- about -->
-    <section class="section">
+    <section class="section" id="about">
         <div class="container">
     
             <div class="row section__inner">
@@ -100,7 +148,7 @@
         </div>
     </section>
     <!-- services -->
-    <section class="section section--turquoise">
+    <section class="section section--turquoise" id="services">
         <div class="container">
             <div class="services">
     
@@ -114,7 +162,7 @@
                 </div>
     
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-md-6 col-lg-4">
                         <div class="services__item">
                             <div class="services__image">
                                 <img src="assets/img/services/services_1.png" alt="" class="services__icon">
@@ -124,7 +172,7 @@
                             <a href="" class="button button--black services__button">Read more</a>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-md-6 col-lg-4">
                         <div class="services__item">
                             <div class="services__image">
                                 <img src="assets/img/services/services_1.png" alt="" class="services__icon">
@@ -134,7 +182,7 @@
                             <a href="" class="button button--black services__button">Read more</a>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-md-6 col-lg-4">
                         <div class="services__item">
                             <div class="services__image">
                                 <img src="assets/img/services/services_1.png" alt="" class="services__icon">
@@ -144,7 +192,7 @@
                             <a href="" class="button button--black services__button">Read more</a>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-md-6 col-lg-4">
                         <div class="services__item">
                             <div class="services__image">
                                 <img src="assets/img/services/services_1.png" alt="" class="services__icon">
@@ -154,7 +202,7 @@
                             <a href="" class="button button--black services__button">Read more</a>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-md-6 col-lg-4">
                         <div class="services__item">
                             <div class="services__image">
                                 <img src="assets/img/services/services_1.png" alt="" class="services__icon">
@@ -164,7 +212,7 @@
                             <a href="" class="button button--black services__button">Read more</a>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-md-6 col-lg-4">
                         <div class="services__item">
                             <div class="services__image">
                                 <img src="assets/img/services/services_1.png" alt="" class="services__icon">
@@ -180,7 +228,7 @@
         </div>
     </section>
     <!-- works -->
-    <section class="section">
+    <section class="section" id="works">
         <div class="container">
     
                 <div class="row section__inner">
@@ -194,7 +242,7 @@
             
             <div class="works">
                 <div class="row">
-                    <div class="col-lg-12 works__menu"">
+                    <div class="col-lg-12 works__menu">
                             <ul class="works__ul">
                                 <li class="works__li">
                                     <button class="button works__button">All</button>
@@ -212,8 +260,8 @@
                     </div>
                 </div>
     
-                <div class="row works__gallery">
-                    <div class="col-lg-4">
+                <div class="row justify-content-center works__gallery">
+                    <div class="col-auto col-sm-6 col-lg-4">
                         <div class="works__item">
                             <img src="assets/img/works/works_1.jpg" alt="works" class="works__image" data-category="ui/ux design">
                             <div class="works__header">
@@ -222,45 +270,45 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-auto col-sm-6 col-lg-4">
                         <div class="works__item">
-                            <img src="assets/img/works/works_2.jpg" alt="works" class="works__image">
+                            <img src="assets/img/works/works_2.jpg" alt="works" class="works__image" data-category="web design">
                             <div class="works__header">
                                 <h3 class="works__title">Item name</h3>
                                 <p class="works__category"></p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-auto col-sm-6 col-lg-4">
                         <div class="works__item">
-                            <img src="assets/img/works/works_3.jpg" alt="works" class="works__image">
+                            <img src="assets/img/works/works_3.jpg" alt="works" class="works__image" data-category="mockups">
                             <div class="works__header">
                                 <h3 class="works__title">Item name</h3>
                                 <p class="works__category"></p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-auto col-sm-6 col-lg-4">
                         <div class="works__item">
-                            <img src="assets/img/works/works_4.jpg" alt="works" class="works__image">
+                            <img src="assets/img/works/works_4.jpg" alt="works" class="works__image" data-category="mockups">
                             <div class="works__header">
                                 <h3 class="works__title">Item name</h3>
                                 <p class="works__category"></p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-auto col-sm-6 col-lg-4">
                         <div class="works__item">
-                            <img src="assets/img/works/works_5.jpg" alt="works" class="works__image">
+                            <img src="assets/img/works/works_5.jpg" alt="works" class="works__image" data-category="web design">
                             <div class="works__header">
                                 <h3 class="works__title">Item name</h3>
                                 <p class="works__category"></p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-auto col-sm-6 col-lg-4">
                         <div class="works__item">
-                            <img src="assets/img/works/works_6.jpg" alt="works" class="works__image">
+                            <img src="assets/img/works/works_6.jpg" alt="works" class="works__image" data-category="ui/ux design">
                             <div class="works__header">
                                 <h3 class="works__title">Item name</h3>
                                 <p class="works__category"></p>
@@ -291,9 +339,9 @@
             </div>
     
             <div class="pricing">
-                <div class="row pricing__inner">
+                <div class="row justify-content-md-center pricing__inner">
     
-                    <div class="col-lg-4">
+                    <div class="col-12 mb-4 col-md-6  col-lg-4">
                         <div class="pricing__item">
                             <div class="pricing__header">
                                 <div class="pricing__title">Free Trial</div>
@@ -311,7 +359,7 @@
                         </div>
                     </div>
     
-                    <div class="col-lg-4">
+                    <div class="col-12 mb-4 col-md-6  col-lg-4">
                         <div class="pricing__item">
                             <div class="pricing__header">
                                 <div class="pricing__title">Basic</div>
@@ -329,7 +377,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-lg-4">
+                    <div class="col-12 mb-4 col-md-6  col-lg-4">
                         <div class="pricing__item">
                             <div class="pricing__header">
                                 <div class="pricing__title">Ultimates</div>
@@ -374,7 +422,7 @@
     
                         <div class="team">
                             <div class="row">
-                                <div class="col-lg-4">
+                                <div class="col-6 mb-3 mb-sm-0 col-sm-4">
                                     <div class="team__item">
                                         <img src="assets/img/team/team_1.jpg" alt="" class="team__image">
                                         <div class="team__header">
@@ -406,7 +454,7 @@
                                     </div>
                                 </div>
                 
-                                <div class="col-lg-4">
+                                <div class="col-6 mb-3 mb-sm-0 col-sm-4">
                                     <div class="team__item">
                                         <img src="assets/img/team/team_2.jpg" alt="" class="team__image">
                                         <div class="team__header">
@@ -438,7 +486,7 @@
                                     </div>
                                 </div>
                 
-                                <div class="col-lg-4">
+                                <div class="col-12 col-sm-4">
                                     <div class="team__item">
                                         <img src="assets/img/team/team_3.jpg" alt="" class="team__image">
                                         <div class="team__header">
@@ -478,7 +526,7 @@
     
                         <div class="team">
                             <div class="row">
-                                <div class="col-lg-4">
+                                <div class="col-6 mb-3 mb-sm-0 col-sm-4">
                                     <div class="team__item">
                                         <img src="assets/img/team/team_1.jpg" alt="" class="team__image">
                                         <div class="team__header">
@@ -510,7 +558,7 @@
                                     </div>
                                 </div>
                 
-                                <div class="col-lg-4">
+                                <div class="col-6 mb-3 mb-sm-0 col-sm-4">
                                     <div class="team__item">
                                         <img src="assets/img/team/team_2.jpg" alt="" class="team__image">
                                         <div class="team__header">
@@ -542,7 +590,7 @@
                                     </div>
                                 </div>
                 
-                                <div class="col-lg-4">
+                                <div class="col-12 col-sm-4">
                                     <div class="team__item">
                                         <img src="assets/img/team/team_3.jpg" alt="" class="team__image">
                                         <div class="team__header">
@@ -582,7 +630,7 @@
     
                         <div class="team">
                             <div class="row">
-                                <div class="col-lg-4">
+                                <div class="col-6 mb-3 mb-sm-0 col-sm-4">
                                     <div class="team__item">
                                         <img src="assets/img/team/team_1.jpg" alt="" class="team__image">
                                         <div class="team__header">
@@ -614,7 +662,7 @@
                                     </div>
                                 </div>
                 
-                                <div class="col-lg-4">
+                                <div class="col-6 mb-3 mb-sm-0 col-sm-4">
                                     <div class="team__item">
                                         <img src="assets/img/team/team_2.jpg" alt="" class="team__image">
                                         <div class="team__header">
@@ -646,7 +694,7 @@
                                     </div>
                                 </div>
                 
-                                <div class="col-lg-4">
+                                <div class="col-12 col-sm-4">
                                     <div class="team__item">
                                         <img src="assets/img/team/team_3.jpg" alt="" class="team__image">
                                         <div class="team__header">
@@ -688,7 +736,7 @@
         </div>
     </section>
     <!-- blog -->
-    <section class="section section--turquoise">
+    <section class="section section--turquoise" id="blog">
         <div class="container">
             <div class="row section__inner">
                 <div class="col-lg-12">
@@ -709,7 +757,7 @@
                             <h3 class="blog__title"><a href="" class="blog__link">SEO Quis Vestibulum</a></h3>
                             <div class="blog__subtitle">
                                 <div class="blog__date">
-                                    <span class="blog__icon"><i class="far fa-calendar-alt"></i></span><time pubdate="2017-02-07">14.0702017</time>
+                                    <span class="blog__icon"><i class="far fa-calendar-alt"></i></span><time pubdate datetime="2017-02-07">14.0702017</time>
                                 </div>
                                 <div class="blog__name">
                                     <span class="blog__icon"><i class="far fa-file"></i></span>Development
@@ -728,7 +776,7 @@
                             <h3 class="blog__title"><a href="" class="blog__link">SEO Quis Vestibulum</a></h3>
                             <div class="blog__subtitle">
                                 <div class="blog__date">
-                                    <span class="blog__icon"><i class="far fa-calendar-alt"></i></span><time pubdate="2017-02-07">14.0702017</time>
+                                    <span class="blog__icon"><i class="far fa-calendar-alt"></i></span><time pubdate datetime="2017-02-07">14.0702017</time>
                                 </div>
                                 <div class="blog__name">
                                     <span class="blog__icon"><i class="far fa-file"></i></span>Development
@@ -747,7 +795,7 @@
                             <h3 class="blog__title"><a href="" class="blog__link">SEO Quis Vestibulum</a></h3>
                             <div class="blog__subtitle">
                                 <div class="blog__date">
-                                    <span class="blog__icon"><i class="far fa-calendar-alt"></i></span><time pubdate="2017-02-07">14.0702017</time>
+                                    <span class="blog__icon"><i class="far fa-calendar-alt"></i></span><time pubdate datetime="2017-02-07">14.0702017</time>
                                 </div>
                                 <div class="blog__name">
                                     <span class="blog__icon"><i class="far fa-file"></i></span>Development
@@ -767,7 +815,7 @@
         </div>
     </section>
     <!-- contact -->
-    <section class="contact section">
+    <section class="contact section" id="contact">
         <div class="container">
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-10">
@@ -783,19 +831,19 @@
     
                     <div class="contact__item">
                         <div class="row d-flex justify-content-around contact__items">
-                            <div class="col-sm-4">
+                            <div class="col-12 mb-4 col-md-4">
                                 <div class="contact__icon">
                                     <i class="fas fa-map-marker-alt"></i>
                                 </div>
                                 <p class="contact__text">Nobinagar savar,Dhaka Bangladesh</p>
                             </div>
-                            <div class="col-sm-4">
+                            <div class="col-12 mb-4 col-md-4">
                                 <div class="contact__icon">
                                     <i class="fas fa-phone-alt"></i>
                                 </div>
                                 <p class="contact__text">+8801743331996 +8801928737807</p>
                             </div>
-                            <div class="col-sm-4">
+                            <div class="col-12 mb-4 col-md-4">
                                 <div class="contact__icon">
                                     <i class="far fa-envelope"></i>
                                 </div>
@@ -809,10 +857,10 @@
     
                                     <div class="row d-flex justify-content-center">
                                         <div class="col-lg-6">
-                                            <input class="contact__input" type="text" name="text" autocomplete="name" autocorrect="off" placeholder="Your NAME">
+                                            <input class="contact__input" type="text" name="text" autocomplete="name" placeholder="Your NAME">
                                         </div>
                                         <div class="col-lg-6">
-                                            <input class="contact__input" type="email" name="email" autocomplete="email" autocorrect="off" placeholder="Your Email">
+                                            <input class="contact__input" type="email" name="email" autocomplete="email" placeholder="Your Email">
                                         </div>
                                     </div>
     
@@ -823,7 +871,7 @@
                                     </div>
     
                                     <div class="row">
-                                        <div class="col-lg-12 d-flex justify-content-end">
+                                        <div class="col-lg-12 d-flex justify-content-center justify-content-sm-end">
                                             <button class="button contact__button" name="contactButton">Send</button>
                                         </div>
                                     </div>
