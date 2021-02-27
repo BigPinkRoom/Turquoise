@@ -2,74 +2,76 @@
 
 // button
 .button {
-    display: inline-block;
-    padding: 15px 15px;
+  display: inline-block;
+  padding: 15px 15px;
 
-    color: $color-white;
-    font-size: 20px;
-    font-weight: 600;
-    text-transform: uppercase;
-    
-    border: 2px solid $color-white;
+  color: $color-white;
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
 
-    transition: background-color .2s linear, border-color .2s linear, color .2s linear;
+  border: 2px solid $color-white;
 
-    &:hover {
-        color: $white;
+  transition: background-color 0.2s linear, border-color 0.2s linear,
+    color 0.2s linear;
 
-        background-color: $color-turquoise-dark;
-        border-color: $color-turquoise-dark;
-    }
+  &:hover {
+    color: $white;
+
+    background-color: $color-turquoise-dark;
+    border-color: $color-turquoise-dark;
+  }
 }
 
 .button--black {
-    color: $color-black;
-    border-color: $color-black;
+  color: $color-black;
+
+  border-color: $color-black;
 }
 
-// section 
+// section
 .section {
-    padding: 120px 0;
+  padding: 120px 0;
 
-    @media(max-width: $max-lg) {
-     padding: 90px 0;   
-    }
+  @media (max-width: $max-lg) {
+    padding: 90px 0;
+  }
 
-    @media (max-width: $max-sm) {
-        padding: 50px 0;
-    }
+  @media (max-width: $max-sm) {
+    padding: 50px 0;
+  }
 }
 
 .section--turquoise {
-    background-color: $color-turquoise;
+  background-color: $color-turquoise;
 }
 
 .section--gray {
-    background-color: $color-gray;
+  background-color: $color-gray;
 }
 
 .section__inner {
-    margin-bottom: 115px;
+  margin-bottom: 115px;
 
-    @media (max-width: $max-lg) {
-        margin-bottom: 85px;   
-       }
+  @media (max-width: $max-lg) {
+    margin-bottom: 85px;
+  }
 
-    @media (max-width: $max-sm) {
-        margin-bottom: 40px;
-    }
+  @media (max-width: $max-sm) {
+    margin-bottom: 40px;
+  }
 }
 
 .section__header {
-    max-width: 630px;
-    margin: 0 auto;
+  max-width: 630px;
+  margin: 0 auto;
 
-    text-align: center;
+  text-align: center;
 }
 
 .section__title {
-    margin-bottom: 22px;
+  margin-bottom: 22px;
 
-    font-size: 30px;
-    font-weight: 700;
+  font-weight: 700;
+  font-size: 30px;
 }

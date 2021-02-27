@@ -1,94 +1,93 @@
-
 /* contact */
 .contact {
-    color: $color-white;
+  color: $color-white;
 
-    background-color: $color-black;
-    background-image: url(../img/contact/contact_bg.jpg);
-    background-size: cover;
+  background-color: $color-black;
+  background-image: url(../img/contact/contact_bg.jpg);
+  background-size: cover;
 }
 
 .contact__items {
-    margin-bottom: 80px;
+  margin-bottom: 80px;
 }
 
 .contact__icon {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
 
-    & i {
+  @media (max-width: $max-md) {
+    margin-bottom: 15px;
+  }
+
+  & i {
     min-width: 100px;
-    padding: 20px;
     margin: 0 auto;
+    padding: 20px;
 
     font-size: 60px;
     text-align: center;
 
-    border-radius: 50%;
     background-color: $color-blue;
-    }
-
-    @media (max-width: $max-md) {
-        margin-bottom: 15px;
-    }
+    border-radius: 50%;
+  }
 }
 
 .contact__text {
-    font-size: 20px;
-    font-weight: 600;
-    text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
 
-    @media (max-width: $max-xl) {
-        font-size: 18px;
-    }
+  @media (max-width: $max-xl) {
+    font-size: 18px;
+  }
 
-    @media (max-width: $max-lg) {
-        font-size: 16px;
-    }
+  @media (max-width: $max-lg) {
+    font-size: 16px;
+  }
 }
 
 .contact__input {
-    width: 100%;
-    padding: 28px 15px;
-    margin-bottom: 32px;
+  width: 100%;
+  margin-bottom: 32px;
+  padding: 28px 15px;
 
-    border: 0;
-    border-radius: $border-radius;
+  border: 0;
+  border-radius: $border-radius;
 
-    &::placeholder {
-        font-size: 20px;
-        font-weight: 600;
-    }
+  &::placeholder {
+    font-weight: 600;
+    font-size: 20px;
+  }
 }
 
 .contact__textarea {
-    width: 100%;
-    min-height: 320px;
-    padding: 28px 15px;
-    margin-bottom: 38px;
+  width: 100%;
+  min-height: 320px;
+  margin-bottom: 38px;
+  padding: 28px 15px;
 
-    border: 0;
-    border-radius: $border-radius;
+  border: 0;
+  border-radius: $border-radius;
 
-    resize: none;
+  resize: none;
 
-    &::placeholder {
-        font-size: 20px;
-        font-weight: 600;
-    }
+  &::placeholder {
+    font-weight: 600;
+    font-size: 20px;
+  }
 }
 
 .contact__button {
-    min-width: 220px;
-    padding: 19px 0;
-    
-    color: $color-black;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    font-weight: 700;
+  min-width: 220px;
+  padding: 19px 0;
 
-    background-color: $color-white;
-    
-    border-radius: $border-radius;
+  color: $color-black;
+  font-weight: 700;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+
+  background-color: $color-white;
+
+  border-radius: $border-radius;
 }

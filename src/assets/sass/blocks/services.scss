@@ -1,81 +1,80 @@
 /* services */
 .services {
-    text-align: center;
+  text-align: center;
 }
 
 .services__title {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 
-    font-size: 20px;
-    font-weight: 600;
+  font-weight: 600;
+  font-size: 20px;
 
-    transition: color .2s linear;
+  transition: color 0.2s linear;
 }
 
 .services__text {
-    margin-bottom: 35px;
-    
-    transition: color .2s linear;
+  margin-bottom: 35px;
 
-    @media (max-width: $max-sm) {
-        font-size: 15px;
-    }
+  transition: color 0.2s linear;
+
+  @media (max-width: $max-sm) {
+    font-size: 15px;
+  }
 }
 
 .services__item {
-    padding: 50px;
-    margin-bottom: 30px;
+  margin-bottom: 30px;
+  padding: 50px;
 
-    background-color: $white;
+  background-color: $white;
 
-    transition: background-color .2s linear, box-shadow .2s linear;
+  transition: background-color 0.2s linear, box-shadow 0.2s linear;
 
-    &:hover {
-        color: $white;
-        
-        background-color: $color-turquoise-dark;
-        box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.35);
+  @media (max-width: $max-sm) {
+    padding: 20px 10px;
+  }
 
-        .services__icon {
-            opacity: 0;
-        }
+  &:hover {
+    color: $white;
 
-        .services__button {
-            color: $color-white;
-    
-            border-color: $color-white;
-        }
+    background-color: $color-turquoise-dark;
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.35);
 
-        .services__button:hover {
-            color: $color-black;
-        
-            border-color: $color-turquoise;
-        
-            background-color: $color-turquoise;
-        }
+    & .services__icon {
+      opacity: 0;
     }
 
-    @media (max-width: $max-sm) {
-        padding: 20px 10px;
+    & .services__button {
+      color: $color-white;
+
+      border-color: $color-white;
     }
+
+    & .services__button:hover {
+      color: $color-black;
+
+      background-color: $color-turquoise;
+      border-color: $color-turquoise;
+    }
+  }
 }
 
 .services__image {
-    margin-bottom: 25px;
+  margin-bottom: 25px;
 
-    background-image: url('../img/services/services_2.png');
-    background-repeat: no-repeat;
-    background-position: center;
+  background-image: url("../img/services/services_2.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .services__icon {
-    margin: 0 auto;
+  margin: 0 auto;
 
-    opacity: 1;
+  opacity: 1;
 
-    transition: opacity .2s linear;
+  transition: opacity 0.2s linear;
 }
 
 .services__button {
-    padding: 12px;
+  padding: 12px;
 }
